@@ -30,6 +30,9 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5D7-fB-M8f">
                                 <rect key="frame" x="55" y="266" width="320" height="216"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="6Qd-yG-9sy"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZD-G3-CG6">
                                 <rect key="frame" x="155" y="507" width="120" height="50"/>
@@ -43,6 +46,14 @@
                                 <state key="normal" title=" Результат">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="lc1-T6-lve"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ты наслаждаешься жизнью уже ... дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ud-c8-5f8">
                                 <rect key="frame" x="95" y="577" width="240" height="43"/>
@@ -67,6 +78,9 @@
                             <constraint firstItem="vqa-0L-mpr" firstAttribute="top" secondItem="Yf7-y6-NSS" secondAttribute="bottom" constant="35" id="xsT-2r-oOd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="7ud-c8-5f8" id="evO-uC-pox"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
